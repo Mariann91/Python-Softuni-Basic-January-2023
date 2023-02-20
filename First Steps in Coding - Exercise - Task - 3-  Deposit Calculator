@@ -1,0 +1,9 @@
+deposit = float(input())
+deposit_dead_line = int(input())
+annual_interest_rate = float(input()) / 100
+
+monthly_interest_rate = annual_interest_rate / 12
+monthly_money = monthly_interest_rate * deposit
+final_money = monthly_money * deposit_dead_line + deposit
+
+print(final_money)
