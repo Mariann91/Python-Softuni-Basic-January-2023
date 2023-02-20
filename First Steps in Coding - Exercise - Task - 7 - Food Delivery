@@ -1,0 +1,14 @@
+number_chicken_menus = int(input())
+number_fish_menus = int(input())
+number_vegetarian_menus = int(input())
+
+CHICKEN_MENU_PRICE = 10.35
+FISH_MENU_PRICE = 12.40
+VEGETARIAN_MENU_PRICE = 8.15
+TRANSPORT_PRICE = 2.50
+
+price_without_desert = number_chicken_menus * CHICKEN_MENU_PRICE + number_fish_menus * FISH_MENU_PRICE + number_vegetarian_menus  * VEGETARIAN_MENU_PRICE
+desesrt_price = price_without_desert * 0.20
+total_price = price_without_desert + desesrt_price + TRANSPORT_PRICE
+
+print(total_price)
