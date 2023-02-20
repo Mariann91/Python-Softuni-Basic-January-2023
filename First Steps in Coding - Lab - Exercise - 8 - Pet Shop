@@ -1,0 +1,12 @@
+number_of_dog_packs = int(input())
+number_of_cat_packs = int(input())
+
+DOG_PACK_PRICE = 2.50
+CAT_PACK_PRICE = 4
+
+dog_food_price = number_of_dog_packs * DOG_PACK_PRICE
+cat_food_price = number_of_cat_packs * CAT_PACK_PRICE
+
+total_price = dog_food_price + cat_food_price
+
+print(f"{total_price} lv.")
