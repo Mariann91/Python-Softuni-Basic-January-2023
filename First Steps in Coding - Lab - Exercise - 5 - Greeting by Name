@@ -1,0 +1,11 @@
+# Solution 1
+
+name = input()
+
+print(f"Hello, {name}!")
+
+# Solution 2
+
+name = input()
+
+print(f"Hello, " + name + "!")
