@@ -1,0 +1,12 @@
+greening_sq_m = float(input())
+
+GREENING_PRICE_PER_SQ_M = 7.61
+
+total_price = greening_sq_m * GREENING_PRICE_PER_SQ_M
+
+discount = total_price * 0.18
+
+price_after_discount = total_price - discount
+
+print(f"The final price is: {price_after_discount} lv.")
+print(f"The discount is: {discount} lv.")
