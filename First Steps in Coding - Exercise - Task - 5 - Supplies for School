@@ -1,0 +1,18 @@
+number_of_pen_packs = int(input())
+number_of_marker_packs = int(input())
+detergent_liters = int(input())
+percent_discount = int(input()) / 100
+
+PEN_PACK_PRICE = 5.80
+MARKET_PACK_PRICE = 7.20
+DETERGENT_LITER_PRICE = 1.20
+
+pens_price = number_of_pen_packs * PEN_PACK_PRICE
+markers_price = number_of_marker_packs * MARKET_PACK_PRICE
+detergent_price = detergent_liters * DETERGENT_LITER_PRICE
+
+total_price = pens_price + markers_price + detergent_price
+discount = total_price * percent_discount
+price_after_discount = total_price - discount
+
+print(price_after_discount)
