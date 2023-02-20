@@ -1,0 +1,7 @@
+usd = float(input())
+
+USD_PRICE_IN_BGN = 1.79549 
+
+usd_to_bgn = usd * USD_PRICE_IN_BGN
+
+print(usd_to_bgn)
