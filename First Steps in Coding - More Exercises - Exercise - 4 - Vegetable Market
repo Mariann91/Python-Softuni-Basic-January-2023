@@ -1,0 +1,13 @@
+vegetables_kg_price = float(input())
+fruits_kg_price = float(input())
+total_kg_vegetables = int(input())
+total_kg_fruits = int(input())
+
+EURO_BGN = 1.94 
+
+vegetables_total_price = vegetables_kg_price * total_kg_vegetables
+fruits_total_price = fruits_kg_price * total_kg_fruits
+total_price_bgn = vegetables_total_price + fruits_total_price
+total_price_euro = total_price_bgn / EURO_BGN
+
+print(f"{total_price_euro:.2f}")
