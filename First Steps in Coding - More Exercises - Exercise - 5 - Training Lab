@@ -1,0 +1,15 @@
+hall_lenght = float(input()) * 100
+hall_width = float(input()) * 100
+
+PLACE_LENGHT = 120
+PLACE_WITDH = 70
+CORIDOR_SIZE = 100
+NOT_FREE_PLACES = 3
+
+hall_lenght_places = hall_lenght // PLACE_LENGHT
+hall_widht_places = (hall_width - CORIDOR_SIZE) // PLACE_WITDH
+
+total_places = hall_lenght_places * hall_widht_places - NOT_FREE_PLACES
+
+
+print(int(total_places))
