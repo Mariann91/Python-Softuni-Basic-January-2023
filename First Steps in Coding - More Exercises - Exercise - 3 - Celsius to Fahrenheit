@@ -1,0 +1,5 @@
+degrees_celsius = float(input())
+
+degrees_fahrenheit = 1.8 * degrees_celsius + 32
+
+print(f"{degrees_fahrenheit:.2f}")
