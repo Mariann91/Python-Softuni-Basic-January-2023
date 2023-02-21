@@ -1,0 +1,10 @@
+from math import pi
+
+radius = float(input())
+
+s = pi * radius ** 2
+p = 2 * pi * radius
+
+
+print(f"{s:.2f}")
+print(f"{p:.2f}")
