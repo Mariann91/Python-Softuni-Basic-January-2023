@@ -1,0 +1,10 @@
+yearly_basketball_tax = int(input())
+
+basketball_shoes_price = yearly_basketball_tax - yearly_basketball_tax * 0.40
+basketball_outfit_price = basketball_shoes_price - basketball_shoes_price * 0.20
+basketball_ball_price = basketball_outfit_price / 4 
+basketball_accessories = basketball_ball_price / 5
+
+total_price = yearly_basketball_tax + basketball_shoes_price + basketball_outfit_price + basketball_ball_price + basketball_accessories
+
+print(total_price)
