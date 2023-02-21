@@ -1,0 +1,11 @@
+fish_tank_lenght = int(input())
+fish_tank_width = int(input())
+tank_height = int(input())
+percent_taken_space = float(input()) / 100
+
+fish_tank_volume = fish_tank_lenght * fish_tank_width * tank_height
+fish_tank_volume_liters = fish_tank_volume / 1000
+taken_space = percent_taken_space * fish_tank_volume_liters
+water_volume = fish_tank_volume_liters - taken_space
+
+print(water_volume)
