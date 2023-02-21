@@ -1,0 +1,14 @@
+mackerel_kg_price = float(input())
+sprinkle_kg_price = float(input())
+kilograms_bonito = float(input())
+kilograms_safrid = float(input())
+kilograms_mussels = int(input())
+
+MUSSELS_KG_PRICE = 7.50
+
+bonito_kg_price = mackerel_kg_price + mackerel_kg_price * 0.60
+safrid_kg_price = sprinkle_kg_price + sprinkle_kg_price * 0.80
+
+total_price = kilograms_bonito * bonito_kg_price + kilograms_safrid * safrid_kg_price + kilograms_mussels * MUSSELS_KG_PRICE
+
+print(f"{total_price:.2f}")
