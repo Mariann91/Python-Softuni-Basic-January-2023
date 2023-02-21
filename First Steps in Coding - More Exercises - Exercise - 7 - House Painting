@@ -1,0 +1,21 @@
+x = float(input())
+y = float(input())
+h = float(input())
+
+GREEN_PAINT_PER_LITER = 3.4
+RED_PAINT_PER_LITER = 4.3
+FRONT_SIDE_SQUARED_DOOR = 1.2 * 2
+SIDE_SIDES_WINDOWS = 1.5 ** 2 * 2
+
+front_square_sides = 2 * (x * x) - FRONT_SIDE_SQUARED_DOOR
+side_reactangle_sides = 2 * (x * y) - SIDE_SIDES_WINDOWS
+
+total_green_paint_needed = (front_square_sides + side_reactangle_sides) / GREEN_PAINT_PER_LITER
+
+rooth_reactangle_sides = 2 * (x * y) 
+rooth_triangle_sides = 2 * ((x * h) / 2)
+
+total_red_paint_needed = (rooth_reactangle_sides + rooth_triangle_sides) / RED_PAINT_PER_LITER
+
+print(f"{total_green_paint_needed:.2f}")
+print(f"{total_red_paint_needed:.2f}")
