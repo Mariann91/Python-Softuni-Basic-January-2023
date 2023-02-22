@@ -9,7 +9,7 @@ seconds = total_time - hours * 60
 
 print(f"{hours:01d}:{seconds:02d}")
 
-#Solution
+# Solution 2
 
 time1 = int(input())
 time2 = int(input())
