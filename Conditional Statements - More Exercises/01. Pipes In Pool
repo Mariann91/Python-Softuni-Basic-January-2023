@@ -1,0 +1,11 @@
+pool_volume_liters = int(input())
+debit_pipe1 = int(input())
+debit_pipe2 = int(input())
+worker_absence_time = float(input())
+
+pipes_volume = (debit_pipe1 + debit_pipe2) * worker_absence_time
+
+if pipes_volume <= pool_volume_liters:
+    print(f"The pool is {pipes_volume / pool_volume_liters * 100:.2f}% full. Pipe 1: {debit_pipe1 / (debit_pipe1 + debit_pipe2) * 100:.2f}%. Pipe 2: {debit_pipe2 / (debit_pipe1 + debit_pipe2) * 100:.2f}%.")
+else:
+    print(f"For {worker_absence_time} hours the pool overflows with {pipes_volume - pool_volume_liters:.2f} liters.")
