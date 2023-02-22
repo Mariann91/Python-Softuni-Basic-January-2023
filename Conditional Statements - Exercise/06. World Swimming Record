@@ -1,0 +1,16 @@
+from math import floor
+
+wordl_record = float(input()) # in seconds
+distance = float(input())
+one_meter_swim = float(input()) # time in seconds to swim 1 meter
+
+
+time_without_delay = distance * one_meter_swim
+delay = floor(distance / 15)* 12.5
+
+total_time = time_without_delay + delay
+
+if total_time < wordl_record:
+    print(f" Yes, he succeeded! The new world record is {total_time:.2f} seconds.")
+else:
+    print(f"No, he failed! He was {total_time - wordl_record:.2f} seconds slower.")
