@@ -1,0 +1,33 @@
+tour_price = float(input())
+
+puzzle_count = int(input())
+talking_doll_count = int(input())
+teddy_bear_count = int(input())
+minion_count = int(input())
+truck_count = int(input())
+
+PUZZLE_PRICE = 2.60
+TALKING_DOLL_PRICE = 3
+TEDDY_BEAR_PRICE = 4.10 
+MINION_PRICE = 8.20 
+TRUCK_PRICE = 2 
+
+total_bill = puzzle_count * PUZZLE_PRICE + \
+talking_doll_count * TALKING_DOLL_PRICE + \
+teddy_bear_count * TEDDY_BEAR_PRICE + \
+minion_count * MINION_PRICE + \
+truck_count * TRUCK_PRICE
+
+toy_count = puzzle_count + talking_doll_count + teddy_bear_count + minion_count + truck_count
+
+if toy_count >= 50:
+    total_bill = total_bill - total_bill * 0.25 
+    
+rent = total_bill * 0.10
+
+money_left = total_bill - rent
+
+if money_left >= tour_price:
+    print(f"Yes! {money_left - tour_price:.2f} lv left.")
+else:
+    print(f"Not enough money! {tour_price - money_left:.2f} lv needed.")
