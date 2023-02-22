@@ -1,0 +1,25 @@
+from math import pi
+
+geometric_figure = input()
+
+face = 0
+
+if geometric_figure == "square":
+    square_side_length = float(input())
+    face = square_side_length * square_side_length
+    
+elif geometric_figure == "rectangle":
+    first_side = float(input())
+    second_side = float(input())
+    face = first_side * second_side
+    
+elif geometric_figure == "circle":
+    radius = float(input())
+    face = pi * radius ** 2 
+    
+elif geometric_figure == "triangle":
+    side_length = float(input())
+    height = float(input())
+    face = 1/2 * side_length * height
+
+print(f"{face:.3f}")
