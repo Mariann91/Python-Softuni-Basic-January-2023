@@ -1,0 +1,17 @@
+from math import ceil
+from math import floor
+
+grape_field_size = int(input())
+grape_from_meter = float(input())
+wine_for_sale = int(input())
+workers_count = int(input())
+
+grape_field_for_wine = grape_field_size * 0.40
+grape_kg = grape_field_for_wine * grape_from_meter
+produced_wine = grape_kg / 2.5
+
+if produced_wine >= wine_for_sale:
+    print(f"Good harvest this year! Total wine: {floor(produced_wine)} liters.")
+    print(f"{ceil(produced_wine - wine_for_sale)} liters left -> {ceil((produced_wine - wine_for_sale) / workers_count)} liters per person.")
+else:
+    print(f"It will be a tough winter! More {floor(wine_for_sale - produced_wine)} liters wine needed.")
