@@ -1,0 +1,18 @@
+free_days = int(input())
+
+TOM_PLAYING_NORM = 30_000
+
+work_days = 365 - free_days
+free_days_playing_time = free_days * 127
+work_days_playing_time = work_days * 63
+
+total_playing_time = free_days_playing_time + work_days_playing_time
+
+if total_playing_time > TOM_PLAYING_NORM:
+    difference = total_playing_time - TOM_PLAYING_NORM
+    print("Tom will run away")
+    print(f"{difference // 60} hours and {difference % 60} minutes more for play")
+else:
+    difference = TOM_PLAYING_NORM - total_playing_time
+    print("Tom sleeps well")
+    print(f"{difference // 60} hours and {difference % 60} minutes less for play")
