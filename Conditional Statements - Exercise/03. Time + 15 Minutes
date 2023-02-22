@@ -1,0 +1,15 @@
+hours = int(input())
+minutes = int(input())
+
+added_time = 15 
+
+minutes += added_time
+
+if minutes >= 60:
+    hours += 1
+    minutes -= 60
+    
+if hours > 23:
+    hours -= 24
+    
+print(f"{hours:01d}:{minutes:02d}")
