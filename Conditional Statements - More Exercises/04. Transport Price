@@ -1,0 +1,19 @@
+distance = int(input())
+day_time = input()
+
+travel_cost = 0
+
+if distance < 20:
+   
+   if day_time == "day":
+        travel_cost = distance * 0.79 + 0.70
+    elif day_time == "night":
+        travel_cost = distance * 0.90 + 0.70
+        
+elif 20 <= distance < 100:
+    travel_cost = distance * 0.09
+
+else:
+    travel_cost = distance * 0.06
+
+print(f"{travel_cost:.2f}")
