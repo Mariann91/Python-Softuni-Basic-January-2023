@@ -1,0 +1,28 @@
+fuel_type = input()
+fuel_amount = float(input())
+card = input()
+
+GASOLINE_PRICE = 2.22
+DIESEL_PRICE = 2.33
+GAS_PRICE = 0.93
+
+bill = 0
+
+if card == "Yes":
+    GASOLINE_PRICE -= 0.18
+    DIESEL_PRICE -= 0.12
+    GAS_PRICE -= 0.08
+
+if fuel_type == "Gasoline":
+    bill = fuel_amount * GASOLINE_PRICE
+elif fuel_type == "Diesel":
+    bill = fuel_amount * DIESEL_PRICE
+elif fuel_type == "Gas":
+    bill = fuel_amount * GAS_PRICE
+
+if 20 <= fuel_amount <= 25:
+    bill *= 0.92
+elif fuel_amount > 25:
+    bill *= 0.90
+
+print(f"{bill:.2f} lv.")
