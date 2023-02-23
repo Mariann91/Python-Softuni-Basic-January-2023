@@ -1,0 +1,15 @@
+from math import floor
+from math import ceil
+
+days_number = int(input())
+total_food_kg = int(input())
+dog_food_kg = float(input())
+cat_food_kg = float(input())
+turtle_food_gr = float(input()) / 1000
+
+animal_food = (dog_food_kg + cat_food_kg + turtle_food_gr) * days_number
+
+if total_food_kg >= animal_food:
+    print(f"{floor(total_food_kg - animal_food)} kilos of food left.")
+else:
+    print(f"{ceil(animal_food - total_food_kg)} kilos of food left.")
