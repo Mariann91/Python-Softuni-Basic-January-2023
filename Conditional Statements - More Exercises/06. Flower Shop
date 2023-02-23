@@ -1,0 +1,30 @@
+from math import floor
+from math import ceil
+
+magnolia_number = int(input())
+hyacinth_number = int(input())
+rose_number = int(input())
+cactus_number = int(input())
+gift_price = float(input())
+
+MAGNOLIA_PRICE = 3.25
+HYACINTH_PRICE = 4 
+ROSE_PRICE = 3.50 
+CACTUS_PRICE = 8 
+
+total_price = magnolia_number * MAGNOLIA_PRICE + \
+hyacinth_number * HYACINTH_PRICE + \
+rose_number * ROSE_PRICE + \
+cactus_number * CACTUS_PRICE
+
+taxes = total_price * 0.05 
+money_left = total_price - taxes
+
+difference = 0 
+
+if money_left >= gift_price:
+    difference = money_left - gift_price
+    print(f"She is left with {floor(difference)} leva.")
+else:
+    difference = gift_price - money_left
+    print(f"She will have to borrow {ceil(difference)} leva.")
