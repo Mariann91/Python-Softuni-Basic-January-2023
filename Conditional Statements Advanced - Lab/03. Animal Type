@@ -1,0 +1,15 @@
+animal_name = input()
+
+mammals = ["dog"]
+reptile = ["crocodile", "tortoise", "snake"]
+others = ["unknown"]
+
+if animal_name == mammals[0]:
+    print("mammal")
+
+elif animal_name == reptile[0] or animal_name == reptile[1]\
+or animal_name == reptile[2]:
+    print("reptile")
+
+else:
+    print(others[0])
