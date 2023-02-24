@@ -1,0 +1,19 @@
+day_of_week = input()
+
+days = ["Monday", "Tuesday", "Wednesday", "Thursday", "Friday", "Saturday", "Sunday"]
+price = ["12", "14", "16"]
+
+if day_of_week == days[0]:
+    print(price[0])
+elif day_of_week == days[1]:
+    print(price[0])
+elif day_of_week == days[2]:
+    print(price[1])
+elif day_of_week == days[3]:
+    print(price[1])
+elif day_of_week == days[4]:
+    print(price[0])
+elif day_of_week == days[5]:
+    print(price[2])
+elif day_of_week == days[6]:
+    print(price[2])
