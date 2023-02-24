@@ -1,0 +1,49 @@
+product = input()
+city = input()
+amount = float(input())
+
+beverages = ["coffee", "water",	"beer",	"sweets", "peanuts"]
+city_name = ["Sofia", "Plovdiv", "Varna"]
+
+price = 0
+    
+if city == city_name[0]:
+    
+    if product == beverages[0]:
+        price = amount * 0.50
+    elif product == beverages[1]:
+        price = amount * 0.80
+    elif product == beverages[2]:
+        price = amount * 1.20
+    elif product == beverages[3]:
+        price = amount * 1.45
+    elif product == beverages[4]:
+        price = amount * 1.60
+
+elif city == city_name[1]:
+    
+    if product == beverages[0]:
+        price = amount * 0.40
+    elif product == beverages[1]:
+        price = amount * 0.70
+    elif product == beverages[2]:
+        price = amount * 1.15
+    elif product == beverages[3]:
+        price = amount * 1.30
+    elif product == beverages[4]:
+        price = amount * 1.50
+
+elif city == city_name[2]:
+    
+    if product == beverages[0]:
+        price = amount * 0.45
+    elif product == beverages[1]:
+        price = amount * 0.70
+    elif product == beverages[2]:
+        price = amount * 1.10
+    elif product == beverages[3]:
+        price = amount * 1.35
+    elif product == beverages[4]:
+        price = amount * 1.55    
+
+print(price)
