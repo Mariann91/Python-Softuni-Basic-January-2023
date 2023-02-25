@@ -1,0 +1,20 @@
+movie_projection = input()
+rows = int(input())
+columns = int(input())
+
+seats = rows * columns
+movie_projection_list = ["Premiere", "Normal", "Discount"]
+price = 0
+
+PREMIERE_PRICE = 12.00
+NORMAL_PRICE = 7.50
+DISCOUNT_PRICE = 5.00
+
+if movie_projection == movie_projection_list[0]:
+    price = PREMIERE_PRICE * seats
+elif movie_projection == movie_projection_list[1]:
+    price = NORMAL_PRICE * seats
+elif movie_projection == movie_projection_list[2]:
+    price = DISCOUNT_PRICE * seats
+
+print(f"{price:.2f} leva")
