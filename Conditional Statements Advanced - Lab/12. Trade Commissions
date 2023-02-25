@@ -1,0 +1,55 @@
+city = input()
+trade_volume = float(input())
+
+city_list = ["Sofia", "Varna", "Plovdiv"]
+commission = 0
+print_flag = True
+
+if city == city_list[0]:
+
+    if 0 <= trade_volume <= 500:
+        commission = trade_volume * 0.05
+    elif 500 < trade_volume <= 1000:
+        commission = trade_volume * 0.07
+    elif 1000 < trade_volume <= 10_000:
+        commission = trade_volume * 0.08
+    elif trade_volume > 10_000:
+        commission = trade_volume * 0.12
+    else:
+        print_flag = False
+        print("error")
+
+elif city == city_list[1]:
+
+    if 0 <= trade_volume <= 500:
+        commission = trade_volume * 0.045
+    elif 500 < trade_volume <= 1000:
+        commission = trade_volume * 0.075
+    elif 1000 < trade_volume <= 10_000:
+        commission = trade_volume * 0.10
+    elif trade_volume > 10_000:
+        commission = trade_volume * 0.13
+    else:
+        print_flag = False
+        print("error")
+
+elif city == city_list[2]:
+
+    if 0 <= trade_volume <= 500:
+        commission = trade_volume * 0.055
+    elif 500 < trade_volume <= 1000:
+        commission = trade_volume * 0.08
+    elif 1000 < trade_volume <= 10_000:
+        commission = trade_volume * 0.12
+    elif trade_volume > 10_000:
+        commission = trade_volume * 0.145
+    else:
+        print_flag = False
+        print("error")
+
+else:
+    print_flag = False
+    print("error")
+
+if print_flag:
+    print(f"{commission:.2f}")
