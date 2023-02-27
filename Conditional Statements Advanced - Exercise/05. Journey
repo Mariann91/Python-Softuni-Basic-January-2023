@@ -1,0 +1,38 @@
+budjet = float(input())
+season = input()
+
+seasons = ["summer", "winter"]
+destinations = ["Camp", "Hotel"]
+places = ["Bulgaria", "Balkans", "Europe"]
+
+place = ""
+destination = ""
+spend_money = 0
+
+if budjet <= 100:
+    place = places[0]
+    
+    if season == seasons[0]:
+        destination = destinations[0]
+        spend_money = budjet * 0.30
+    elif season == seasons[1]:
+        destination = destinations[1]
+        spend_money = budjet * 0.70
+
+elif budjet <= 1000:
+    place = places[1]
+    
+    if season == seasons[0]:
+        destination = destinations[0]
+        spend_money = budjet * 0.40
+    elif season == seasons[1]:
+        destination = destinations[1]
+        spend_money = budjet * 0.80
+
+elif budjet > 1000:
+    place = places[2]
+    destination = destinations[1]
+    spend_money = budjet * 0.90
+
+print(f"Somewhere in {place}" )
+print(f"{destination} - {spend_money:.2f}")
