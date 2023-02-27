@@ -1,0 +1,27 @@
+juniors_count = int(input())
+seniors_count = int(input())
+trace = input()
+
+trace_list = ["trail", "cross-country", "downhill", "road"]
+total_count = juniors_count + seniors_count
+gained_money = 0
+
+if trace == trace_list[0]:
+    gained_money = juniors_count * 5.50 + seniors_count * 7
+
+elif trace == trace_list[1]:
+    gained_money = juniors_count * 8 + seniors_count * 9.50
+    
+    if total_count >= 50:
+        gained_money *= 0.75
+
+elif trace == trace_list[2]:
+    gained_money = juniors_count * 12.25 + seniors_count * 13.75
+
+elif trace == trace_list[3]:
+    gained_money = juniors_count * 20 + seniors_count * 21.50
+
+taxes = gained_money * 0.05
+money_after_taxes = gained_money - taxes
+
+print(f"{money_after_taxes:.2f}")
