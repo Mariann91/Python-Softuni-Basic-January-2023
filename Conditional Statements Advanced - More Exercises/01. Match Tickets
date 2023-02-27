@@ -1,0 +1,38 @@
+budjet = float(input())
+ticket_type = input()
+group_size = int(input())
+
+VIP_TICKET_PRICE = 499.99 
+NORMAL_TICKET_PRICE = 249.99 
+
+transport = 0 
+
+if 1 <= group_size <= 4:
+    transport = budjet * 0.75
+    
+elif 5 <= group_size <= 9:
+    transport = budjet * 0.60
+    
+elif 10 <= group_size <= 24:
+    transport = budjet * 0.50
+
+elif 25 <= group_size <= 49:
+    transport = budjet * 0.40
+
+elif group_size >= 50:
+    transport = budjet * 0.25
+    
+ticket_price = 0    
+
+if ticket_type == "VIP":
+    ticket_price = VIP_TICKET_PRICE * group_size
+    
+elif ticket_type == "Normal":
+    ticket_price = NORMAL_TICKET_PRICE * group_size
+
+total_price = ticket_price + transport
+
+if budjet >= total_price:
+    print(f"Yes! You have {budjet - total_price:.2f} leva left.")
+else:
+    print(f"Not enough money! You need {total_price - budjet:.2f} leva.")
