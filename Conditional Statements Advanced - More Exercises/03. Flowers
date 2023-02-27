@@ -1,0 +1,37 @@
+chrysanthemums_count = int(input()) 
+roses_count = int(input()) 
+tulips_count = int(input()) 
+season = input()
+day_type = input()
+
+ARRANGEMENT_PRICE = 2
+
+price = 0
+flowers_count = chrysanthemums_count + roses_count + tulips_count
+
+if season == "Spring" or season == "Summer":
+    price = chrysanthemums_count * 2 + roses_count * 4.10 + tulips_count * 2.50
+    
+    if day_type == "Y":
+        price *= 1.15
+        
+elif season == "Autumn" or season == "Winter":
+    price = chrysanthemums_count * 3.75 + roses_count * 4.50 + tulips_count * 4.15
+    
+    if day_type == "Y":
+        price *= 1.15
+
+if season == "Spring" and tulips_count > 7:
+    price *= 0.95
+
+elif season == "Winter" and roses_count >= 10:
+    price *= 0.90
+
+
+if flowers_count > 20:
+    price *= 0.80
+
+final_price = price + ARRANGEMENT_PRICE
+
+
+print(f"{final_price:.2f}")
