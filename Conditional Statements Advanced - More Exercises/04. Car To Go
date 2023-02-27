@@ -1,0 +1,34 @@
+budjet = float(input())
+season = input()
+
+car_class = ""
+car = ""
+rent = 0
+
+if budjet <= 100:
+    car_class = "Economy class"
+    
+    if season == "Summer":
+        car = "Cabrio"
+        rent = budjet * 0.35
+    elif season == "Winter":
+        car = "Jeep"
+        rent = budjet * 0.65
+
+elif budjet <= 500:
+    car_class = "Compact class"
+    
+    if season == "Summer":
+        car = "Cabrio"
+        rent = budjet * 0.45
+    elif season == "Winter":
+        car = "Jeep"
+        rent = budjet * 0.80
+
+elif budjet > 500:
+    car_class = "Luxury class"
+    car = "Jeep"
+    rent = budjet * 0.90
+
+print(f"{car_class}")
+print(f"{car} - {rent:.2f}")
