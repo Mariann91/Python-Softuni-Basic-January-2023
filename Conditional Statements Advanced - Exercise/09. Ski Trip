@@ -1,0 +1,42 @@
+days = int(input())
+room_type = input()
+grade = input()
+
+ROOM_FOR_ONE_PERSON_PRICE = 18
+APARTMENT_PRICE = 25
+PRESIDENT_APARTMENT = 35
+
+room_type_list = ["room for one person", "apartment", "president apartment"]
+grade_list = ["positive", "negative"]
+nights = days - 1
+price = 0
+
+if room_type == room_type_list[0]:
+    price = nights * ROOM_FOR_ONE_PERSON_PRICE
+    
+elif room_type == room_type_list[1]:
+    price = nights * APARTMENT_PRICE
+    
+    if days < 10:
+        price *= 0.70
+    elif 10 <= days <= 15:
+        price *= 0.65
+    elif days > 15:
+        price *= 0.50
+        
+elif room_type == room_type_list[2]:
+    price = nights * PRESIDENT_APARTMENT
+    
+    if days < 10:
+        price *= 0.90
+    elif 10 <= days <= 15:
+        price *= 0.85
+    elif days > 15:
+        price *= 0.80
+
+if grade == grade_list[0]:
+    price *= 1.25
+elif grade == grade_list[1]:
+    price *= 0.90
+
+print(f"{price:.2f}")
