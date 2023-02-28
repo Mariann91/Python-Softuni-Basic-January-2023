@@ -1,0 +1,24 @@
+from math import floor
+
+tours_count = int(input())
+start_points = int(input())
+
+points = 0
+wins = 0
+
+for _ in range(tours_count):
+    tour_round = input()
+    
+    if tour_round == "W":
+        points += 2000
+        wins += 1
+    elif tour_round == "F":
+        points += 1200
+    elif tour_round == "SF":
+        points += 720
+    
+final_points = start_points + points
+
+print(f"Final points: {final_points}")
+print(f"Average points: {floor(points / tours_count)}")
+print(f"{wins / tours_count * 100:.2f}%")
