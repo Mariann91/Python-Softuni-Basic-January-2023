@@ -1,0 +1,20 @@
+numbers_count = int(input())
+
+left_sum = 0
+
+for _ in range(numbers_count):
+    number1 = int(input())
+    
+    left_sum += number1
+    
+right_sum = 0
+
+for _ in range(numbers_count):
+    number2 = int(input())
+    
+    right_sum += number2    
+
+if right_sum == left_sum:
+    print(f"Yes, sum = {right_sum:}")
+else:
+    print(f"No, diff = {abs(right_sum - left_sum)}")
