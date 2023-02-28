@@ -1,0 +1,38 @@
+budjet = float(input())
+season = input()
+
+place = ""
+destination = ""
+price = 0
+
+if budjet <= 1000:
+    place = "Camp"
+    
+    if season == "Summer":
+        destination = "Alaska"
+        price = budjet * 0.65
+    elif season == "Winter":
+        destination = "Morocco"
+        price = budjet * 0.45
+
+elif budjet <= 3000:
+    place = "Hut"
+    
+    if season == "Summer":
+        destination = "Alaska"
+        price = budjet * 0.80
+    elif season == "Winter":
+        destination = "Morocco"
+        price = budjet * 0.60
+
+elif budjet > 3000:
+    place = "Hotel"
+    
+    if season == "Summer":
+        destination = "Alaska"
+        price = budjet * 0.90
+    elif season == "Winter":
+        destination = "Morocco"
+        price = budjet * 0.90
+
+print(f"{destination} - {place} - {price:.2f}")
