@@ -1,0 +1,20 @@
+numbers_count = int(input())
+
+counter = 0
+odd_sum = 0
+even_sum = 0
+
+for num in range(numbers_count):
+    current_number = int(input())
+    
+    counter += 1 
+    
+    if counter % 2 != 0:
+        odd_sum += current_number
+    else:
+        even_sum += current_number
+
+if odd_sum == even_sum:
+    print(f"Yes\nSum = {odd_sum}")
+else:
+    print(f"No\nDiff = {abs(odd_sum - even_sum)}")
