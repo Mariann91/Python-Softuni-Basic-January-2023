@@ -1,0 +1,10 @@
+numbers_count = int(input())
+
+sum_sumbers = 0 
+
+for number in range(numbers_count):
+    current_number = int(input())
+    
+    sum_sumbers += current_number
+
+print(sum_sumbers)
