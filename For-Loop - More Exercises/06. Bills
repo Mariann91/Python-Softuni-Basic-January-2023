@@ -1,0 +1,25 @@
+months = int(input())
+
+WATER = 20
+INTERNET = 15
+
+total_electricity = 0 
+total_others = 0
+
+for _ in range(months):
+    electricity = float(input())
+    
+    total_electricity += electricity
+    others = (electricity + WATER + INTERNET) + \
+    (electricity + WATER + INTERNET) * 0.20
+    total_others += others
+
+total_water = months * WATER
+total_internet = months * INTERNET
+total_spend_money = total_electricity + total_others + total_water + total_internet
+
+print(f"Electricity: {total_electricity:.2f} lv")
+print(f"Water: {total_water:.2f} lv")
+print(f"Internet: {total_internet:.2f} lv")
+print(f"Other: {total_others:.2f} lv")
+print(f"Average: {total_spend_money / months:.2f} lv")
