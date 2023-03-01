@@ -1,0 +1,35 @@
+numbers = int(input()) * 2
+
+counter = 0
+sum_numbers = 0
+first_pair = 0
+second_pair = 0
+max_difference = float("-inf")
+difference = 0
+
+for _ in range(numbers):
+    current_number = int(input())
+
+    counter += 1
+
+    sum_numbers += current_number
+
+    if counter % 2 == 0 and counter == 2:
+        first_pair = sum_numbers
+
+    if counter % 2 == 0 and counter == 4:
+        second_pair = sum_numbers - first_pair
+
+        if first_pair != second_pair:
+            difference = abs(first_pair - second_pair)
+
+            if difference > max_difference:
+                max_difference = difference
+
+        counter = 0
+        sum_numbers = 0
+
+if difference == 0:
+    print(f"Yes, value={first_pair}")
+else:
+    print(f"No, maxdiff={max_difference}")
