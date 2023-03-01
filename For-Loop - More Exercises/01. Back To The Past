@@ -1,0 +1,16 @@
+money_had = float(input())
+year_to_live = int(input())
+
+age = 17
+for year in range(1800, year_to_live + 1):
+    age += 1
+      
+    if year % 2 == 0:
+        money_had -= 12_000
+    else:
+        money_had -= 12_000 + (50 * age)
+
+if money_had >= 0:
+    print(f"Yes! He will live a carefree life and will have {money_had:.2f} dollars left." )
+else:
+    print(f"He will need {abs(money_had):.2f} dollars to survive.")
