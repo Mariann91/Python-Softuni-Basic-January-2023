@@ -1,0 +1,27 @@
+number_packages = int(input())
+
+price = 0
+microbus, truck, train = 0, 0, 0
+
+for _ in range(number_packages):
+    package_weight = int(input())
+    
+    if package_weight <= 3:
+        price += 200 * package_weight
+        microbus += package_weight
+        
+    elif package_weight <= 11:
+        price += 175 * package_weight
+        truck += package_weight
+    elif package_weight >= 12:
+        
+        price += 120 * package_weight
+        train += package_weight
+        
+total_weight = microbus + truck + train
+average_price_per_tone = price / total_weight
+
+print(f"{average_price_per_tone:.2f}")
+print(f"{microbus / total_weight * 100:.2f}%")
+print(f"{truck / total_weight * 100:.2f}%")
+print(f"{train / total_weight * 100:.2f}%")
