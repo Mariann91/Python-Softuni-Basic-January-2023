@@ -1,0 +1,24 @@
+days = int(input())
+
+DOCTORS = 7
+treated_pations = 0
+untreated_pations = 0
+day = 0
+
+for _ in range(days):
+    pations = int(input())
+    
+    day += 1
+    
+    if day % 3 == 0 and untreated_pations > treated_pations:
+        DOCTORS += 1
+    
+    if pations <= 7:
+        treated_pations += pations
+    else:
+        treated_pations += DOCTORS
+        untreated_pations += pations - DOCTORS
+
+print(f"Treated patients: {treated_pations}.")
+print(f"Untreated patients: {untreated_pations}.")
+    
