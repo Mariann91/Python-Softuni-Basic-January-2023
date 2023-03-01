@@ -1,0 +1,40 @@
+rounds = int(input())
+
+points = 0 
+invalid_numbers = 0 
+first_group, second_group, third_group, fourth_group, fifth_group = 0, 0, 0, 0, 0
+
+for _ in range (rounds):
+    number = int(input())
+    
+    if number < 0 or number > 50:
+        invalid_numbers += 1
+        points /= 2
+    
+    elif number < 10:
+        first_group += 1
+        points += number * 0.20
+        
+    elif number < 20:
+        second_group += 1
+        points += number * 0.30
+        
+    elif number < 30:
+        third_group += 1
+        points += number * 0.40
+        
+    elif number < 40:
+        fourth_group += 1
+        points += 50
+        
+    elif number <= 50:
+        fifth_group += 1
+        points += 100
+
+print(f"{points:.2f}")
+print(f"From 0 to 9: {first_group / rounds * 100:.2f}%")
+print(f"From 10 to 19: {second_group / rounds * 100:.2f}%")
+print(f"From 20 to 29: {third_group / rounds * 100:.2f}%")
+print(f"From 30 to 39: {fourth_group / rounds * 100:.2f}%")
+print(f"From 40 to 50: {fifth_group/ rounds * 100:.2f}%")
+print(f"Invalid numbers: {invalid_numbers / rounds * 100:.2f}%")
