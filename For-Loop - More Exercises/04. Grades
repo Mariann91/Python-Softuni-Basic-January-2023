@@ -1,0 +1,24 @@
+students = int(input())
+
+fail, good, very_good, top = 0, 0, 0, 0
+total_grade = 0
+
+for _ in range(students):
+    grade = float(input()) 
+    
+    if grade < 3:
+        fail += 1
+    elif grade < 4:
+        good += 1
+    elif grade < 5:
+        very_good += 1
+    elif grade <= 6:
+        top += 1
+    
+    total_grade += grade
+
+print(f"Top students: {top / students * 100:.2f}%")
+print(f"Between 4.00 and 4.99: {very_good / students * 100:.2f}%")
+print(f"Between 3.00 and 3.99: {good / students * 100:.2f}%")
+print(f"Fail: {fail / students * 100:.2f}%")
+print(f"Average: {total_grade / students:.2f}")
