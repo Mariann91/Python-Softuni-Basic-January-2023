@@ -1,0 +1,25 @@
+low_grades = int(input())
+
+low_grades_counter = 0
+total_grade = 0
+task_counter = 0
+
+while low_grades_counter < low_grades:
+    exercise_name = input()
+    
+    if exercise_name == "Enough":
+        print(f"Average score: {total_grade / task_counter:.2f}")
+        print(f"Number of problems: {task_counter}")
+        print(f"Last problem: {last_task}")
+        break
+    
+    grade = float(input())
+    task_counter += 1
+    last_task = exercise_name
+    total_grade += grade
+    
+    if grade <= 4:
+        low_grades_counter += 1
+        
+else:
+    print(f"You need a break, {low_grades_counter} poor grades.")
