@@ -1,0 +1,39 @@
+money_to_gather = int (input())
+
+gathered_money = 0 
+counter = 0
+cash_money, card_money = 0, 0 
+cash_counter, card_counter = 0, 0
+
+while gathered_money < money_to_gather:
+    object_price = input()
+    
+    if object_price == "End":
+        print("Failed to collect required money for charity.")
+        break 
+    
+    object_price = int(object_price)
+    counter += 1
+    
+    if counter % 2 != 0:
+        
+        if object_price > 100:
+            print("Error in transaction!")
+        else:
+            cash_counter += 1
+            cash_money += object_price
+            gathered_money += object_price
+            print("Product sold!")
+    else:
+        
+        if object_price < 10:
+            print("Error in transaction!")
+        else:
+            card_counter += 1
+            card_money += object_price
+            gathered_money += object_price
+            print("Product sold!") 
+
+else:
+    print(f"Average CS: {cash_money / cash_counter:.2f}")
+    print(f"Average CC: {card_money / card_counter:.2f}")
