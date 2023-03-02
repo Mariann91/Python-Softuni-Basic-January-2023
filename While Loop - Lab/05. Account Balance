@@ -1,0 +1,20 @@
+sum_amount = 0
+
+while True:
+    amount = input()
+    
+    if amount == "NoMoreMoney":
+        print(f"Total: {sum_amount:.2f}")
+        break
+    
+    amount = float(amount)
+    
+    if amount < 0:
+        print(f"Invalid operation!")
+        print(f"Total: {sum_amount:.2f}")
+        break
+        
+    
+    sum_amount += amount
+    
+    print(f"Increase: {amount:.2f}")
