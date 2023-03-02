@@ -1,0 +1,23 @@
+name = input()
+
+years = 0
+total_grade = 0 
+bad_grades = 0 
+
+while years < 12:
+    grade = float(input())
+    
+    if grade >= 4:
+        years += 1
+        total_grade += grade
+    elif grade < 4:
+        
+        bad_grades += 1
+        
+        if bad_grades > 1:
+            years += 1
+            print(f"{name} has been excluded at {years} grade")
+            break
+            
+else:
+    print(f"{name} graduated. Average grade: {total_grade / years:.2f}")
