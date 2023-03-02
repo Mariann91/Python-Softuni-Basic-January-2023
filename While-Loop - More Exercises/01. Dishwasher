@@ -1,0 +1,29 @@
+detergent_count = int(input())
+
+total_detergent = detergent_count * 750
+detergent_used = 0 
+counter = 0
+dishes_count = 0 
+pots_count = 0
+
+while detergent_used <= total_detergent:
+    dishes = input()
+    
+    if dishes == "End":
+        print("Detergent was enough!")
+        print(f"{dishes_count} dishes and {pots_count} pots were washed.")
+        print(f"Leftover detergent {total_detergent - detergent_used} ml.")
+        break
+    
+    dishes = int(dishes)
+    counter += 1
+    
+    if counter % 3 != 0:
+        dishes_count += dishes
+        detergent_used += dishes * 5
+    else:
+        pots_count += dishes
+        detergent_used += dishes * 15
+
+else:
+    print(f"Not enough detergent, {detergent_used - total_detergent} ml. more necessary!")
