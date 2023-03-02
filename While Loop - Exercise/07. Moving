@@ -1,0 +1,18 @@
+width, lenght, height = int(input()), int(input()), int(input())
+
+free_space = width * lenght * height
+taken_space = 0
+
+while taken_space < free_space:
+    box_count = input()
+    
+    if box_count == "Done":
+        print(f"{free_space - taken_space} Cubic meters left.")
+        break
+    
+    box_count = int(box_count)
+    
+    taken_space += box_count
+    
+else:
+    print(f"No more free space! You need {taken_space - free_space} Cubic meters more.")
