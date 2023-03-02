@@ -1,0 +1,30 @@
+tour_money = float(input())
+money_have = float(input())
+
+days = 0
+spend_days = 0
+
+while money_have < tour_money:
+    activity = input()
+    money = float(input())
+    days += 1
+    
+    if activity == "save":
+        money_have += money
+        spend_days = 0
+    
+    elif activity == "spend":
+        spend_days += 1 
+        
+        if money_have < money:
+            money_have = 0
+        else:
+            money_have -= money
+        
+        if spend_days == 5:
+            print("You can't save the money.")
+            print(f"{days}")
+            break
+
+else:
+    print(f"You saved the money for {days} days.")
