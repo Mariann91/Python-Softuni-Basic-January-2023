@@ -1,0 +1,22 @@
+first_start_number = int(input())
+second_start_number = int(input())
+first_end_number = int(input())
+second_end_number = int(input())
+
+for num1 in range(first_start_number, first_start_number + first_end_number + 1):
+    for num2 in range(second_start_number, second_start_number + second_end_number + 1):
+        
+        prime_flag = True
+        
+        for num1_prime in range(2, num1):
+            if num1 % num1_prime == 0:
+                prime_flag = False
+                    
+        for num2_prime in range(2, num2):
+            
+            if num2 % num2_prime == 0:
+                prime_flag = False
+            
+        if prime_flag:
+            print(f"{num1}{num2}")
+                
