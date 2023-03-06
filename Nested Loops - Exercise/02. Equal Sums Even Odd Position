@@ -1,0 +1,17 @@
+start_number = int(input())
+end_number = int(input())
+
+for number in range(start_number, end_number + 1):
+    odd_numbers_sum = 0
+    even_numbers_sum = 0
+    
+    for index, digits in enumerate(str(number)):
+        
+        if index % 2 != 0:
+            odd_numbers_sum += int(digits)
+        else:
+            even_numbers_sum += int(digits)
+        
+    if odd_numbers_sum == even_numbers_sum:
+        print(number, end=" ")
+        
