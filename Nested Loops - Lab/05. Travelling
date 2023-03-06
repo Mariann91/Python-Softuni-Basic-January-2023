@@ -1,0 +1,17 @@
+while True:
+    destination = input()
+    
+    if destination == "End":
+        break
+    
+    destination_budjet = float(input())
+    
+    budjet = 0
+    
+    while budjet < destination_budjet:
+        saved_money = float(input())
+        
+        budjet += saved_money
+    else:
+        print(f"Going to {destination}!")
+    
