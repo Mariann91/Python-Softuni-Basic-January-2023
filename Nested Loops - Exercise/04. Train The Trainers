@@ -1,0 +1,27 @@
+judjes_count = int(input())
+
+presentation_counter = 0
+total_grade = 0
+
+while True:
+    presentation = input()
+    
+    if presentation == "Finish":
+        print(f"Student's final assessment is {total_grade / presentation_counter:.2f}.")
+        break
+    
+    presentation_counter += 1
+    
+    presentation_grade = 0
+    average_presentation_grade = 0
+    
+    for _ in range(judjes_count):
+        grade = float(input())
+        
+        presentation_grade += grade
+        
+    average_presentation_grade = presentation_grade / judjes_count
+    
+    print(f"{presentation} - {average_presentation_grade:.2f}.")
+    
+    total_grade += average_presentation_grade
