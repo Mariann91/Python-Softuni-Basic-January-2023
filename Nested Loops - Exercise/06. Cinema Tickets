@@ -1,0 +1,36 @@
+students, standards, kids = 0, 0, 0
+total_tickets = 0
+
+while True:
+    movie_name = input()
+    
+    if movie_name == "Finish":
+        print(f"Total tickets: {total_tickets}")
+        print(f"{students / total_tickets * 100:.2f}% student tickets.")
+        print(f"{standards / total_tickets * 100:.2f}% standard tickets.")
+        print(f"{kids / total_tickets * 100:.2f}% kids tickets.")
+        break
+    
+    capacity = int(input())
+    taken_seats = 0
+    
+    while taken_seats < capacity:
+        ticket_type = input()
+        
+        if ticket_type == "End":
+            print(f"{movie_name} - {taken_seats / capacity * 100:.2f}% full.")
+            break
+        
+        taken_seats += 1
+        
+        if ticket_type == "student":
+            students += 1
+        elif ticket_type == "standard":
+            standards += 1
+        elif ticket_type == "kid":
+            kids += 1
+    else:
+        print(f"{movie_name} - {taken_seats / capacity * 100:.2f}% full.")
+    
+    total_tickets += taken_seats
+        
