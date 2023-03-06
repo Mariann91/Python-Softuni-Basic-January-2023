@@ -1,0 +1,28 @@
+number = int(input())
+
+for num1 in range(1111, 10_000):
+    
+    special_counter = 0
+    
+    for index, digit in enumerate(str(num1)):
+        
+        digit = int(digit)
+        
+        if digit > 0:
+        
+            if number % digit == 0 and index == 0:
+                special_counter += 1
+                first_number = digit
+            elif number % digit == 0 and index == 1:
+                special_counter += 1
+                second_number = digit
+            elif number % digit == 0 and index == 2:
+                special_counter += 1
+                third_number = digit
+            elif number % digit == 0 and index == 3:
+                special_counter += 1
+                fourth_number = digit
+        
+    if special_counter == 4:
+        print(f"{first_number}{second_number}{third_number}{fourth_number}", end=" ")
+        
