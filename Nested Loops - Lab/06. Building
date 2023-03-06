@@ -1,0 +1,16 @@
+floors_count = int(input())
+rooms_count = int(input())
+
+for floor in range(floors_count, 0, -1):
+    for room in range(rooms_count ):
+        room_name = floor * 10 + room
+       
+        if floor == floors_count:
+            room_floor_name = f"L{room_name}"
+        elif floor % 2 == 0:
+            room_floor_name = f"O{room_name}"
+        elif floor % 2 != 0:
+            room_floor_name = f"A{room_name}"
+        
+        print(room_floor_name, end=" ")
+    print()   
