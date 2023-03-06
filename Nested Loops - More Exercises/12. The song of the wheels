@@ -1,0 +1,25 @@
+control = int(input())
+counter = 0
+
+for num1 in range(1, 10):
+    for num2 in range(1, 10):
+        for num3 in range(1, 10):
+            for num4 in range(1, 10):
+                
+                if num1 * num2 + num3 * num4 == control:
+                    if num1 < num2 and num3 > num4:
+                        
+                        counter += 1
+                        print(f"{num1}{num2}{num3}{num4}", end=" ")
+                        
+                        if counter == 4:
+                            fourth_number = f"{num1}{num2}{num3}{num4}"
+
+if counter > 4:
+    print()
+    print(f"Password: {fourth_number}")
+elif counter > 0:
+    print()
+    print("No!")
+else:
+    print("No!")
