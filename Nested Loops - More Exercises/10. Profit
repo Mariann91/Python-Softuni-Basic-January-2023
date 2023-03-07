@@ -1,0 +1,13 @@
+one_lev = int(input())
+two_lev = int(input())
+five_lev = int(input())
+wanted_sum = int(input())
+        
+for coin_one in range(one_lev + 1):
+    for coin_two in range(two_lev + 1):
+        for coin_five in range(five_lev + 1):
+            
+           current_sum = coin_one * 1 + coin_two * 2 + coin_five * 5
+           
+           if current_sum == wanted_sum:
+               print(f"{coin_one} * 1 lv. + {coin_two} * 2 lv. + {coin_five} * 5 lv. = {wanted_sum} lv.")
