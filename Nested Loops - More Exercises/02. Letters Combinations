@@ -1,0 +1,18 @@
+letter1 = input()
+letter2 = input()
+control_letter = input()
+
+letter1 = ord(letter1)
+letter2 = ord(letter2)
+control_letter = ord(control_letter)
+counter = 0
+
+for char1 in range(letter1, letter2 + 1):
+    for char2 in range(letter1, letter2 + 1):
+        for char3 in range(letter1, letter2 + 1):
+            
+            if char1 != control_letter and char2 != control_letter and char3 != control_letter:
+                counter += 1
+                print(f"{chr(char1)}{chr(char2)}{chr(char3)}", end=" ")
+
+print(counter, end="")    
