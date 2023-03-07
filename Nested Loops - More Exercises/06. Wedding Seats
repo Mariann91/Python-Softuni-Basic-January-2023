@@ -1,0 +1,40 @@
+sector_limit = input()
+rows_count = int(input())
+odd_row_seats = int(input())
+
+sector_limit = ord(sector_limit)
+
+alphabet_list = \
+['a', 'b', 'c', 'd', 'e', 'f', 'g', 'h', 'i', 'j', 'k', 'l', 'm', \
+'n','o', 'p', 'q', 'r', 's', 't', 'u', 'v', 'w', 'x', 'y', 'z']
+
+counter = 0
+
+for sector in range(65, sector_limit + 1):
+
+    if sector > 65:
+        rows_count += 1
+        even_row_seats = 0
+    
+    for row in range(1, rows_count + 1):
+        
+        if row % 2 == 0:
+            even_row_seats = odd_row_seats + 2
+            
+            for even_seat in range(even_row_seats):
+                
+                even_seat = alphabet_list[even_seat]
+                counter += 1
+                
+                print(f"{chr(sector)}{row}{even_seat}")
+                
+        else:
+            for odd_seat in range(odd_row_seats):
+                
+                odd_seat = alphabet_list[odd_seat]
+                counter += 1
+                
+                print(f"{chr(sector)}{row}{odd_seat}")
+
+else:
+    print(counter)
