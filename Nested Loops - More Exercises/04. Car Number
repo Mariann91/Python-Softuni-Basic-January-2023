@@ -1,0 +1,19 @@
+start_number = int(input())
+end_number = int(input())
+
+for num1 in range(start_number, end_number + 1):
+    for num2 in range(start_number, end_number + 1):
+        for num3 in range(start_number, end_number + 1):
+            for num4 in range(start_number, end_number + 1):
+                
+                middle_pair_even_sum = num2 + num3
+                
+                if num1 > num4:
+                    
+                    if middle_pair_even_sum % 2 == 0:
+                        
+                        if num1 % 2 == 0 and num4 % 2 != 0:
+                            print(f"{num1}{num2}{num3}{num4}", end=" ")
+                        
+                        elif num1 % 2 != 0 and num4 % 2 == 0:
+                            print(f"{num1}{num2}{num3}{num4}", end=" ")
