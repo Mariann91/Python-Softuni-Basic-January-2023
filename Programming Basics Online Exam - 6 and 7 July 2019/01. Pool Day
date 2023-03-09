@@ -1,0 +1,15 @@
+from math import ceil
+
+people_count = int(input())
+entry_price = float(input())
+sun_lounger_price = float(input())
+umbrella_price = float(input())
+
+def total_price_pool():
+    total_entry_price = people_count * entry_price
+    total_sun_lounger_price = ceil(people_count * 0.75) * sun_lounger_price
+    total_umbrella_price = ceil(people_count / 2) * umbrella_price
+    total_price = total_entry_price + total_sun_lounger_price + total_umbrella_price
+    print(f"{total_price:.2f} lv." )
+
+total_price_pool()
