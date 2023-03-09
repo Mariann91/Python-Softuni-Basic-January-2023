@@ -1,0 +1,20 @@
+budjet = float(input())
+nights_count = int(input())
+night_price = float(input())
+percent_additional_spending = int(input()) / 100
+
+if nights_count > 7:
+        night_price *= 0.95
+
+def total_price():
+        
+    additional_spending = budjet * percent_additional_spending
+    total_nights_price = nights_count * night_price
+    total_vacation_price = additional_spending + total_nights_price
+    
+    if budjet >= total_vacation_price:
+        print(f"Ivanovi will be left with {budjet - total_vacation_price:.2f} leva after vacation.")
+    else:
+        print(f"{total_vacation_price - budjet:.2f} leva needed.")
+
+total_price()
