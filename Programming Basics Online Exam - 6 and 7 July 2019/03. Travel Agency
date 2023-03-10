@@ -1,0 +1,49 @@
+city = input()
+package = input()
+vip_discount = input()
+days = int(input())
+
+price = 0
+
+if city == "Bansko" or city == "Borovets":
+    if package == "noEquipment":
+        price = 80
+        
+        if vip_discount == "yes":
+            price *= 0.95
+            
+    elif package == "withEquipment":
+        price = 100
+        
+        if vip_discount == "yes":
+            price *= 0.90
+    else:
+        print("Invalid input!")
+
+elif city == "Varna" or city == "Burgas":
+    if package == "noBreakfast":
+        price = 100
+        
+        if vip_discount == "yes":
+            price *= 0.93
+            
+    elif package == "withBreakfast":
+        price = 130
+        
+        if vip_discount == "yes":
+            price *= 0.88
+    else:
+        print("Invalid input!")
+
+else:
+    print("Invalid input!")
+
+if days > 7:
+    days -= 1
+elif days < 1:
+    print("Days must be positive number!")
+
+total_price = days * price
+
+if total_price > 0:
+    print(f"The price is {total_price:.2f}lv! Have a nice time!")
