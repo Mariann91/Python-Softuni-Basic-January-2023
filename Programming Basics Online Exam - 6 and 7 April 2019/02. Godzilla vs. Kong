@@ -1,0 +1,25 @@
+budjet = float(input())
+statisticians_count = int(input())
+statist_outfit_cost = float(input())
+
+def movie_cost(movie_budjet, statist_number, outfit_price):
+    """Calculate movie cost"""
+    
+    decor_cost = movie_budjet * 0.10
+    
+    if statist_number > 150:
+        outfit_price *= 0.90
+    
+    statists_cost = statist_number * outfit_price
+    
+    return statists_cost + decor_cost
+
+final_price = movie_cost(budjet, statisticians_count, statist_outfit_cost)
+
+if budjet >= final_price:
+    print("Action!")
+    print(f"Wingard starts filming with {budjet - final_price:.2f} leva left.")
+
+else:
+    print("Not enough money!")
+    print(f"Wingard needs {final_price - budjet:.2f} leva more.")
