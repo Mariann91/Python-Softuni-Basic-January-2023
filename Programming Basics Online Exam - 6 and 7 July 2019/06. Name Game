@@ -1,0 +1,25 @@
+max_points = float("-inf")
+counter = 0
+
+while True:
+    player_name = input()
+    
+    if player_name == "Stop":
+        break
+    
+    points = 0
+    
+    for letter in player_name:
+        number = int(input())
+        
+        if number == ord(letter):
+            points += 10
+        else:
+            points += 2
+        
+        if points >= max_points:
+            max_points = points
+            winner_name = player_name
+                
+
+print(f"The winner is {winner_name} with {max_points} points!")
