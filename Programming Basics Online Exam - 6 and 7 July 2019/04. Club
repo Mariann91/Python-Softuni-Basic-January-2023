@@ -1,0 +1,24 @@
+money_to_gain = float(input())
+
+earned_money = 0 
+
+while earned_money < money_to_gain:
+    drink_name = input()
+    
+    if drink_name == "Party!":
+        print(f"We need {money_to_gain - earned_money:.2f} leva more.")
+        print(f"Club income - {earned_money:.2f} leva.")
+        break
+    
+    drinks_count = int(input())
+    
+    drink_price = drinks_count * len(drink_name)
+    
+    if drink_price % 2 != 0:
+        drink_price *= 0.75
+    
+    earned_money += drink_price
+    
+else:
+    print("Target acquired.")
+    print(f"Club income - {earned_money:.2f} leva.")
