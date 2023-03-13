@@ -20,7 +20,7 @@ while pained_sq_m < sq_m_to_be_pained:
     
 else:
     if pained_sq_m > sq_m_to_be_pained:
-        print(f"All walls are painted and you have{pained_sq_m - sq_m_to_be_pained} l paint left!")
+        print(f"All walls are painted and you have {pained_sq_m - sq_m_to_be_pained} l paint left!")
     
     else:
         print("All walls are painted! Great job, Pesho!")
