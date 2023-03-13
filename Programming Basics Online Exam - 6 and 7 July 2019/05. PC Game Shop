@@ -1,0 +1,20 @@
+saled_games = int(input())
+
+hearth_group, fornite_group, over_group, others_group = 0, 0, 0, 0
+
+for _ in range(saled_games):
+    game_name = input()
+    
+    if game_name == "Hearthstone":
+        hearth_group += 1 
+    elif game_name == "Fornite":
+        fornite_group += 1 
+    elif game_name == "Overwatch":
+        over_group += 1 
+    else:
+        others_group += 1
+else:
+    print(f"Hearthstone - {hearth_group / saled_games * 100:.2f}%")
+    print(f"Fornite - {fornite_group / saled_games * 100:.2f}%")
+    print(f"Overwatch - {over_group / saled_games * 100:.2f}%")
+    print(f"Others - {others_group / saled_games * 100:.2f}%")
