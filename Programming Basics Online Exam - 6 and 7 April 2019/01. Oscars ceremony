@@ -1,0 +1,14 @@
+rent = int(input())
+
+def ceremony_price(hall_rent):
+    """Calculating ceremony_price"""
+    
+    statuettes_price = rent - rent * 0.30
+    catering_price = statuettes_price - statuettes_price * 0.15
+    dubbing_price = catering_price / 2
+    
+    return statuettes_price + catering_price + dubbing_price + hall_rent
+
+total_price = ceremony_price(rent)
+
+print(f"{total_price:.2f}")
