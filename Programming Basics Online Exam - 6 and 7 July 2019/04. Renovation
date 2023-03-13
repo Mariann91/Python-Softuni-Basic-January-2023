@@ -1,0 +1,26 @@
+from math import ceil
+
+wall_heigth = int(input())
+wall_width = int(input()) 
+percent_not_pained = int(input()) / 100
+
+sq_m_to_be_pained = ceil(wall_heigth * wall_width * 4 - wall_heigth * wall_width * 4 * percent_not_pained)
+pained_sq_m = 0 
+
+while pained_sq_m < sq_m_to_be_pained:
+    pain_liters = input()
+    
+    if pain_liters == "Tired!":
+        print(f"{sq_m_to_be_pained - pained_sq_m} quadratic m left.")
+        break
+    
+    pain_liters = int(pain_liters)
+    
+    pained_sq_m += pain_liters
+    
+else:
+    if pained_sq_m > sq_m_to_be_pained:
+        print(f"All walls are painted and you have{pained_sq_m - sq_m_to_be_pained} l paint left!")
+    
+    else:
+        print("All walls are painted! Great job, Pesho!")
