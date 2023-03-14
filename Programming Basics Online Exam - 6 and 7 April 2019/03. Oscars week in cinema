@@ -1,0 +1,85 @@
+movies = {
+    
+    "A Star Is Born" : {
+        
+        "normal" : 7.50,
+        "luxury" : 10.50,
+        "ultra luxury" : 13.50,
+    },
+        
+    "Bohemian Rhapsody" : {
+        
+        "normal" : 7.35,
+        "luxury" : 9.45,
+        "ultra luxury" : 12.75,
+    },
+  
+    "Green Book" : {
+        "normal" : 8.15,
+        "luxury" : 10.25,
+        "ultra luxury" : 13.25,
+    },
+        
+
+    "The Favourite" : {
+        
+        "normal" : 8.75,
+        "luxury" : 11.55,
+        "ultra luxury" : 13.95,
+    },
+}
+
+def movie_cost():
+
+    if movie == "A Star Is Born":
+        
+        if hall == "normal":
+            return movies["A Star Is Born"]["normal"] * ticket_count
+            
+        elif hall == "luxury":
+            return movies["A Star Is Born"]["luxury"] * ticket_count
+            
+        elif hall == "ultra luxury":
+            return movies["A Star Is Born"]["ultra luxury"] * ticket_count
+    
+    elif movie == "Bohemian Rhapsody":
+        
+        if hall == "normal":
+            return movies["Bohemian Rhapsody"]["normal"] * ticket_count
+            
+        elif hall == "luxury":
+            return movies["Bohemian Rhapsody"]["luxury"] * ticket_count
+            
+        elif hall == "ultra luxury":
+            return movies["Bohemian Rhapsody"]["ultra luxury"] * ticket_count
+    
+    elif movie == "Green Book":
+        
+        if hall == "normal":
+            return movies["Green Book"]["normal"] * ticket_count
+            
+        elif hall == "luxury":
+            return movies["Green Book"]["luxury"] * ticket_count
+            
+        elif hall == "ultra luxury":
+            return movies["Green Book"]["ultra luxury"] * ticket_count
+    
+    elif movie == "The Favourite" :
+        
+        if hall == "normal":
+            return movies["The Favourite"]["normal"] * ticket_count
+            
+        elif hall == "luxury":
+            return movies["The Favourite"]["luxury"] * ticket_count
+            
+        elif hall == "ultra luxury":
+            return movies["The Favourite" ]["ultra luxury"] * ticket_count
+
+
+movie = input()
+hall = input()
+ticket_count = int(input())
+
+result = movie_cost()
+
+print(f"{movie} -> {result:.2f} lv.")
